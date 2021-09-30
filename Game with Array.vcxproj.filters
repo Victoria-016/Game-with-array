@@ -18,6 +18,9 @@
     <ClCompile Include="Game with Array.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
     <ClCompile Include="Point.h">
       <Filter>Header Files</Filter>
     </ClCompile>
@@ -36,49 +39,5 @@
     <ClCompile Include="Game.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Level editor\Level editor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlaceActor.cpp">
-      <Filter>Header Files\Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Key.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Door.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Goal.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.h">
-      <Filter>Header Files\Resource Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="PlaceActor.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Key.h">
-      <Filter>Header Files\Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Door.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files\Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Goal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

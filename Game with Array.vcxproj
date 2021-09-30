@@ -140,17 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1Game.cpp" />
-    <ClCompile Include="Door.cpp" />
-    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game with Array.cpp" />
     <ClCompile Include="Game.h" />
-    <ClCompile Include="Goal.cpp" />
-    <ClCompile Include="Item.cpp" />
-    <ClCompile Include="Key.cpp" />
-    <ClCompile Include="Level editor\Level editor.cpp" />
     <ClCompile Include="Level.h" />
     <ClCompile Include="Level.cpp" />
-    <ClCompile Include="PlaceActor.cpp" />
     <ClCompile Include="Player.h" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Point.h" />
@@ -159,14 +152,6 @@
     <ProjectReference Include="..\Level editor\Level editor.vcxproj">
       <Project>{a7c92e6f-71a5-4b50-b81d-1db3135ed67a}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Door.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Goal.h" />
-    <ClInclude Include="Item.h" />
-    <ClInclude Include="Key.h" />
-    <ClInclude Include="PlaceActor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

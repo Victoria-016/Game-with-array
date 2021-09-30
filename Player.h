@@ -1,30 +1,28 @@
 #pragma once
-#include "PlaceActor.h"
+#include "Point.h"
 
-
-class Key;
-
-class Player : public PlaceActor
+class Player
 {
+	Point m_position;
+	bool m_hasKey;
+	
 public:
 	Player();
+	~Player();
 
+	int GetXPosition() { return m_position.x; }
+	int GetYPosition() { return m_position.y; }
+
+
+		int* GetXPositionPointer() { return &(m_position.x); }
+		int* GetYPositionPointer() { return &(m_position.y); }
+
+	void SetPosition(int x, int y);
 
 	bool HasKey();
-	bool HasKey(int color);
-	bool PickUpKey(Key* key);
+	void PickUpKey();
 	void UseKey();
-	void DropKey();
-	
-	void AddItem(int item) { m_item += item;  }
-	int GetItem() { return m_item;  }
 
-	int GetLives() { return m_lives;  }
-	void DecrementLives() { m_lives--; }
+	void Draw();
 
-	virtual void Draw() override;
-private:
-	Key* m_pCurrentKey;
-	int m_item;
-	int m_lives;
 };
