@@ -9,5 +9,5 @@ public:
 	bool IsCorrect(true);
 	void DisplayText();
 
-
+	bool m_Answer;
 };

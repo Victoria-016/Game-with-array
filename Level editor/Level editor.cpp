@@ -22,8 +22,6 @@ constexpr int kUpArrow = 72;
 constexpr int kDownArrow = 80;
 
 constexpr int kEscape = 27;
-constexpr int kBackspace = 8;
-
 
 
 void GetLevelDimensions(int& width, int& height);
@@ -35,7 +33,6 @@ void DisplayLeftBorder();
 void DisplayRightBorder();
 bool EditLevel(char* pLevel, int& cursorX, int& cursorY, int width, int height);
 void SaveLevel(char* pLevel, int width, int height);
-void DisplayLegend();
 
 int main()
 {
@@ -59,7 +56,6 @@ int main()
     {
         system("cls");
         DisplayLevel(pLevel, levelWidth, levelHeight, cursorX, cursorY);
-        DisplayLegend();
         doneEditing = EditLevel(pLevel, cursorX, cursorY, levelWidth, levelHeight);
     }
 
@@ -74,22 +70,6 @@ int main()
 
 
 }
-
-void DisplayLegend()
-{
-    cout << "Arrows will move coursor.\n";
-    cout << "Escape to complete edit.\n";
-    cout << "Use + for corners, | for vertical wall and - for horizontal.\n";
-    cout << "Use @ symbol to set player starting point. \n";
-    cout << "Use r g b for key.\n";
-    cout << "Use R G B for door.\n";
-    cout << "Use $ for item.\n";
-    cout << "Use v for vertucal moving enemy.\n";
-    cout << "Use h for horozontal moving enemy.\n";
-    cout << "Use e for non-moving enemy or obstical.\n";
-    cout << "Use x for game end.\n";
-}
-
 void SaveLevel(char* pLevel, int width, int height)
 {
     cout << "Pick a name for your level file (eg: Level.txt): ";
@@ -165,10 +145,6 @@ bool EditLevel(char* pLevel, int& cursorX, int& cursorY, int width, int height)
         if (intInput == kEscape)
         {
             return true; // done with level editor
-        }
-        else if (intInput == kBackspace)
-        {
-            //ignore
         }
         else
         {

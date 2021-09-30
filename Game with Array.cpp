@@ -2,8 +2,6 @@
 #include "Game.h"
 
 
-// I am looking to add text in between each level, also want to add moving obsticales that cause daamage and damage over time coordinates on the map. Also want to use the level editor created to create map.
-
 using namespace std;
 
 
@@ -18,26 +16,16 @@ int main()
 		{
 			myGame.Run();
 		}
-
-		if (myGame.DidUserQuit())
-		{
-			cout << "You have quit, thanks for playing. Goodbye!" << endl;
-		}
-		else if (myGame.GetPlayerLives() < 0)
-		{
-			cout << "You Lose!" << endl;
-		}
-		else
-		{
-			cout << "You Win!" << endl;
-		}
+		cout << "You Won!!!" << endl;
+		//PlayWinSound();
 	}
 	else
 	{
-		cout << "Game did not load. Terminating now, please try again later." << endl;
+		cout << "Game did not load. Terminating now!" << endl;
 	}
-}
+	
 
+}
 
 //}
 //void PlayDoorCloseSound()
