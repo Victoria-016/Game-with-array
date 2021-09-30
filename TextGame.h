@@ -7,7 +7,10 @@ public:
 	
 	bool DidAnswer(true);
 	bool IsCorrect(true);
-	void DisplayText();
+	void DisplayText1();
+	void DisplayText2();
 
-	bool m_Answer;
+private:
+	bool m_AnswerRm2;
+	bool m_AnswerRm3;
 };

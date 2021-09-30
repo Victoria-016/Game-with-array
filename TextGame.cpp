@@ -1,9 +1,18 @@
-#pragma once
+#include <iostream>
+#include  "TextGame.h"
 
 TextGame::TextGame()
 {
 
-	void DisplayText()
+	void DisplayText1()
+	{
+
+	}
+	void DisplayText2()
+	{
+
+	}
+	voud DisplayText3()
 	{
 
 	}
@@ -11,7 +20,11 @@ TextGame::TextGame()
 	{
 
 	}
-	bool IsCorrect(true)
+	bool IsCorrect1(true)
+	{
+
+	}
+	bool IsCorrect2()
 	{
 
 	}
