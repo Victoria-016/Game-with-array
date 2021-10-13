@@ -121,6 +121,9 @@ bool Level::Convert(int* playerX, int* playerY)
 			case 'x':
 				m_pLevelData[index] = GOL;
 				break;
+			case '$':
+				m_pLevelData[index] = '$';
+				break;
 			case '@':
 				m_pLevelData[index] = ' ';
 				if (playerX != nullptr && playerY != nullptr)
