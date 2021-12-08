@@ -9,6 +9,10 @@ constexpr char WAL = (char)219;
 constexpr char KEY = (char)232;
 constexpr char DOR = (char)179;
 constexpr char GOL = (char)36;
+constexpr char DMG = (char)177;
+constexpr char LIF = '!';
+constexpr char ENM = '~';
+constexpr char INS = (char)219;
 
 
 Level::Level()
@@ -30,7 +34,7 @@ Level::~Level()
 }
 bool Level::Load(std::string levelName, int* playerX, int* playerY)
 {
-	levelName.insert (0, "../");
+	levelName.insert(0, "../");
 	ifstream levelFile;
 	levelFile.open(levelName);
 	if (!levelFile)
@@ -42,17 +46,17 @@ bool Level::Load(std::string levelName, int* playerX, int* playerY)
 	{
 		constexpr int tempSize = 25;
 		char temp[tempSize];
-		
+
 		levelFile.getline(temp, tempSize, '\n');
 		m_width = atoi(temp);
 
 		levelFile.getline(temp, tempSize, '\n');
 		m_height = atoi(temp);
-		
+
 
 		m_pLevelData = new char[m_width * m_height];
 		levelFile.read(m_pLevelData, (long long)m_width * (long long)m_height);
-		
+
 		bool anyWarnings = Convert(playerX, playerY);
 
 		if (anyWarnings)
@@ -82,12 +86,20 @@ bool Level::IsKey(int x, int y)
 {
 	return m_pLevelData[GetIndexFromCoordinates(x, y)] == KEY;
 }
+bool Level::IsDamage(int x, int y)
+{
+	return m_pLevelData[GetIndexFromCoordinates(x, y)] == DMG;
+}
 bool Level::IsGoal(int x, int y)
 {
 	return m_pLevelData[GetIndexFromCoordinates(x, y)] == GOL;
 }
 
 void Level::PickUpKey(int x, int y)
+{
+	m_pLevelData[GetIndexFromCoordinates(x, y)] = ' ';
+}
+void Level::PickUpDamage(int x, int y)
 {
 	m_pLevelData[GetIndexFromCoordinates(x, y)] = ' ';
 }
@@ -121,8 +133,8 @@ bool Level::Convert(int* playerX, int* playerY)
 			case 'x':
 				m_pLevelData[index] = GOL;
 				break;
-			case '$':
-				m_pLevelData[index] = '$';
+			case '#':
+				m_pLevelData[index] = DMG;
 				break;
 			case '@':
 				m_pLevelData[index] = ' ';
@@ -131,7 +143,20 @@ bool Level::Convert(int* playerX, int* playerY)
 					*playerX = x;
 					*playerY = y;
 				}
-				
+				break;
+			case '!':
+				m_pLevelData[index] = LIF;
+				break;
+			case 'h':
+				m_pLevelData[index] = ENM;
+				break;
+			case 'v':
+				m_pLevelData[index] = ENM;
+				break;
+			case '&':
+				m_pLevelData[index] = INS;
+				break;
+
 				break;
 			case ' ':
 				break;

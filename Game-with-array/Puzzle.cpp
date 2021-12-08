@@ -1,17 +1,18 @@
 #include <iostream>
 #include <windows.h>
 
-#include "Key.h"
+#include "Puzzle.h"
+#include "Game.h"
 
-void Key::Draw()
+void PuzzleInstance::Draw()
 {
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(console, m_color);
 
-	std::cout << "*";
+	std::cout << "&";
 	SetConsoleTextAttribute(console, kRegularColor);
 
 
 
-}
+};
 

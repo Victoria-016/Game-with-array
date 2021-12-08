@@ -2,7 +2,7 @@
 #include "Goal.h"
 
 Goal::Goal(int x, int y)
-	:PlaceActor(x, y)
+	:PlaceActor(x, y, kRedColor)
 {
 
 }

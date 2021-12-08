@@ -2,7 +2,7 @@
 #include <iostream>
 
 Enemy::Enemy(int x, int y, int deltaX, int deltaY)
-	:PlaceActor(x, y)
+	:PlaceActor(x, y, kRedColor)
 	, m_currentMovementX(0)
 	, m_currentMovementY(0)
 	, m_directionX(0)

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -140,11 +140,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1Game.cpp" />
+    <ClCompile Include="Damage.cpp" />
+    <ClCompile Include="Door.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game with Array.cpp" />
+    <ClInclude Include="Damage.h" />
+    <ClInclude Include="Door.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="GameStateMachine.h" />
+    <ClInclude Include="Goal.h" />
+    <ClInclude Include="Health.h" />
+    <ClInclude Include="Key.h" />
     <ClInclude Include="Level.h" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="GameStateMachine.cpp" />
+    <ClCompile Include="Goal.cpp" />
+    <ClCompile Include="Health.cpp" />
+    <ClCompile Include="Key.cpp" />
     <ClCompile Include="Level.cpp" />
+    <ClInclude Include="PlaceActor.h" />
     <ClInclude Include="Player.h" />
+    <ClCompile Include="PlaceActor.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClInclude Include="Point.h" />
   </ItemGroup>

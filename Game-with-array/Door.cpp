@@ -17,7 +17,7 @@ void Door::Draw()
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 	if (m_IsOpen)
 	{
-		SetConsoleTextAttribute(console, m_closedColor);
+		SetConsoleTextAttribute(console, kOpenDoorColor);
 	}
 	else
 	{

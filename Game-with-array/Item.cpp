@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Item.h"
+#include "Life.h"
 
-Item::Item(int x, int y, int reduceDOT)
+(int x, int y, int reduceDOT)
 	: PlaceActor(x, y)
 	, m_reduceDOT(reduceDOT)
 {

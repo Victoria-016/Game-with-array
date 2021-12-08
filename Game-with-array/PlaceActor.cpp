@@ -34,7 +34,7 @@ int* PlaceActor::GetXPositionPointer()
 int* PlaceActor::GetYPositionPointer()
 {
 	return &(m_pPosition->y);
-	
+
 
 }
 

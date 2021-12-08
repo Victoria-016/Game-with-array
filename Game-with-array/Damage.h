@@ -1,10 +1,13 @@
 #pragma once
 #include "PlaceActor.h"
+#include "Level.h"
+#include "windows.h"
 
-class Key : public PlaceActor
+
+class Damage : public PlaceActor
 {
 public:
-	Key(int x, int y, int color)
+	Damage(int x, int y, int color)
 		: PlaceActor(x, y, kRedColor)
 	{
 

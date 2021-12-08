@@ -23,10 +23,9 @@ int main()
 	{
 		cout << "Game did not load. Terminating now!" << endl;
 	}
-	
+
 
 }
-
 //}
 //void PlayDoorCloseSound()
 //{

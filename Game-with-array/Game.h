@@ -14,12 +14,13 @@ public:
 
 	bool Load();
 	void Run();
-	
+
 
 	bool IsGameOver();
 
 private:
 	bool Update();
 	void Draw();
+	bool HandleCollision(int newPlayerX, int newPlayerY);
 
 };

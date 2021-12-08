@@ -8,12 +8,14 @@ constexpr int kRedColorSolid = 68;
 constexpr int kBlueColor = 9;
 constexpr int kBlueColorSolid = 153;
 constexpr int kRegularColor = 7;
+constexpr int kOpenDoorColor = 10;
+constexpr int kClosedDoorColor = 12;
 
 
 class PlaceActor
 {
 public:
-	PlaceActor(int x, int y, int color = kRegularColor);
+	PlaceActor(int x, int y, int color);
 	virtual ~PlaceActor();
 
 	int GetXPosition();
